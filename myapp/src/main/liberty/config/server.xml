@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <!-- <feature>jakartaee-10.0</feature> -->
+        <!-- <feature>webProfile-10.0</feature> -->
+        <feature>restfulWS-3.1</feature>
+    </featureManager>
+
+    <basicRegistry id="basic" realm="BasicRealm">
+    </basicRegistry>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="9080"
+                  httpsPort="-1"
+                  host="*" />
+
+    <applicationManager autoExpand="false"/>
+
+    <!-- Configures the application on a specified context root -->
+    <webApplication contextRoot="/myapp" location="/path/to/myapp.war" />
+
+    <!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
+    <!-- <ssl id="defaultSSLConfig" trustDefaultCerts="true" /> -->
+</server>

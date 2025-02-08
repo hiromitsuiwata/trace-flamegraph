@@ -1,0 +1,2 @@
+-Duser.language=en
+-javaagent:/path/to/agent-1.0.jar
